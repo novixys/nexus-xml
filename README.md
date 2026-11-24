@@ -17,6 +17,7 @@ Built by [Novixys](https://novixys.com) on battle-tested streaming XML shredding
 * **Resilient to Real-World Schema Drift:** Stores raw text safely during ingestion so real-world data anomalies (such as string values appearing in numeric XSD fields or omitted optional blocks) never crash your pipeline.
 * **Millisecond XPath-to-SQL Queries (`xpathsql`):** Query your multi-gigabyte shredded datasets using intuitive XPath predicates and inspect the exact compiled multi-table SQL `JOIN` before execution.
 * **Warehouse-Ready Parquet Export (`nexus-parquet`):** Export all discovered relational tables and the XPath lineage metadata catalog to ZSTD-compressed `.parquet` files ready for DuckDB, Snowflake, Databricks, or BigQuery.
+* **100% Air-Gapped & Zero Telemetry:** Pure local file I/O with zero network calls, zero phone-home tracking, and zero external runtime dependencies—safe for HIPAA, PCI-DSS, financial, and air-gapped environments. Shipped as a 100% statically linked Linux x86_64 binary.
 
 ---
 
