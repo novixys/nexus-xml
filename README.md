@@ -46,7 +46,7 @@ chmod +x nexus-xml xpathsql nexus-parquet
 Ingest one or more deeply nested XML files into an atomic SQLite database:
 
 ```bash
-./nexus-xml -o absee_2026_10.db /path/to/sec_absee_xml/*.xml
+./nexus-xml -l warn -f absee_2026_10.db /path/to/sec_absee_xml/*.xml
 ```
 * Each file runs in its own transaction (`BEGIN` → `COMMIT` / `ROLLBACK`).
 * If a file contains syntax errors or unclosed tags, all rows from that file are rolled back cleanly so you can fix the file and re-run without duplicates.
