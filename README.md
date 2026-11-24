@@ -1,5 +1,5 @@
 # nexus-xml
-Streaming C++ XML-to-Parquet and SQLite shredder for complex, deeply nested XML. Automatically infers relational schemas with foreign keys, guarantees atomic file transactions, and compiles XPath queries to SQL.
+Streaming C++ XML-to-Parquet and SQLite shredder for complex, deeply nested XML. Automatically infers relational schemas mirroring your XML structure and enforced with foreign keys, guarantees atomic file transactions, and compiles XPath queries to SQL.
 
 
 Built by [Novixys](https://novixys.com) on battle-tested streaming XML shredding architecture, `nexus-xml` turns complex, deeply nested enterprise XML (SEC filings, ISO 20022, HL7/FHIR, ACORD, UBL, or any other XML) into clean, queryable relational tables in seconds.
@@ -10,7 +10,7 @@ Built by [Novixys](https://novixys.com) on battle-tested streaming XML shredding
 
 * **Zero XSD or Manual Mapping Required:** Automatically discovers nested hierarchies of any depth, creates normalized parent-child tables with foreign keys, and evolves columns on the fly as optional tags appear.
   
-* **No out-of-memory crashes:** Uses a streaming architecture to process arbitrarily large XML without memory issues.
+* **No out-of-memory crashes:** Uses a streaming architecture to process arbitrarily large XML without memory issues. No need for expensive high memory cloud instances.
 * **Automatically figures out relationships:** SQL tables are created mirroring your XML structure with parent-child relationships.
 * **Merge data from multiple XML files:** XML parsing ensures your data is merged according to the XML structure.
 * **Atomic File-Level ACID Transactions:** Every XML file is ingested inside an explicit transaction. Valid files commit cleanly across all tables; malformed or truncated files roll back 100% automatically, making retries possible with zero duplicate records.
